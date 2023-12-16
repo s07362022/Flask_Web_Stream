@@ -1,25 +1,9 @@
 import cv2
 import numpy as np
-# import pandas as pd
+
 import datetime
 import pprint
-#from pymongo import MongoClient
-# import pandas as pd
-# import json
-# import imutils
-# import time
-# from datetime import datetime
-# import RPi.GPIO as GPIO
-# import time
 
-
-#YOLO_network
-# net = cv2.dnn.readNetFromDarknet("yolov4-tiny.cfg","yolov4-tiny_last.weights")
-
-# layer_names = net.getLayerNames()
-# output_layers = [layer_names[i[0] - 1] for i in net.getUnconnectedOutLayers()]
-# classes = [line.strip() for line in open("obj.names")]
-# colors = [(0,0,255),(255,0,0),(0,255,0)]
 
 CONFIDENCE_THRESHOLD = 0.2
 NMS_THRESHOLD = 0.4
@@ -73,37 +57,6 @@ def yolo_detect(frame,path_name,count):
                 
     return frame
 img_path = './img'
-# img = yolo_detect(frame,path_name=img_path,count=count)
-
-#def record(img_name,label,x,y,w,h,result):
-  
- # df=pd.DataFrame() 
- # result = datetime.now().strftime("%Y-%m-%d %H:%M:%S %p")
-  #grades = [["test","Sensor/yolo",img_name,label,x,y,w,h,result]]
-  #data = pd.DataFrame(grades)
-  #df=df.append(data,ignore_index=True)
- # df.columns = ['measurement','topic','img_name','label','x','y','w','h','time'] 
-  #print(df)  
-
-  
-  
-
-# VIDEO_IN = cv2.VideoCapture(0)
-
-# while True:
-#     hasFrame, frame = VIDEO_IN.read()
-#     if hasFrame!=False:
-#         img = yolo_detect(frame,path_name=img_path,count=count)
-#         cv2.imshow("Frame", imutils.resize(img, width=640,height=480))#imutils.resize(img), width=, width=860
-#         count=count+1
-#     else:
-#         pass
-#     if cv2.waitKey(1) & 0xFF == ord('q'):
-#         break
-
-
-# VIDEO_IN.release()    
-# cv2.destroyAllWindows()
 
 
  
